@@ -1,24 +1,52 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Header from './components/Header'
+import TechSkills from './components/TechSkills'
+import { makeStyles, createStyles } from '@material-ui/core/styles';
+import Experience from './components/Experience'
+import Contact from './components/Contact';
+import Projects from './components/Projects';
+import Achievements from './components/Achievements';
+import Education from './components/Education';
 
-function App() {
+const useStyles = makeStyles((theme) => createStyles({
+  content:{
+    minHeight: '100vh',
+    maxWidth: 'calc(100vh * .935)',
+    margin: 'auto',
+    // backgroundColor: '#2f3136',
+    backgroundColor: '#f1f1f1'
+  },
+  withSidebar: {
+    display: 'flex',
+    flexWrap: 'wrap',
+  },
+  sidebar: {
+    flexBasis: '10rem',
+    flexGrow: '1',
+  },
+  notSidebar: {
+    flexBasis: '0',
+    flexGrow: '999',
+  }
+}))
+
+const App = () => {
+  const classes = useStyles()
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={classes.content}>
+      <Header />
+      <div className={classes.withSidebar}>
+        <div className={classes.sidebar}>
+          <Contact/>
+          <TechSkills/>
+          <Achievements/>
+        </div>
+        <div className={classes.notSidebar}>
+          <Experience/>
+          <Projects/>
+          <Education/>
+        </div>
+      </div>
     </div>
   );
 }
