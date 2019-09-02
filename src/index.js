@@ -1,22 +1,29 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import './index.css'
+import App from './App'
+import * as serviceWorker from './serviceWorker'
 import { createMuiTheme } from '@material-ui/core/styles'
-import { ThemeProvider } from '@material-ui/styles';
-import { CssBaseline } from '@material-ui/core';
+import { ThemeProvider } from '@material-ui/styles'
+import { CssBaseline } from '@material-ui/core'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
 
 const baseTheme = {
   palette:{
     background: {
-      default: "#202225"
+      default: "#3f51b5"
     },
-  }
+  },
+  spacing: 7
 }
 
 const themeWeb = createMuiTheme(baseTheme);
+const themeDark = createMuiTheme({
+  ...baseTheme,
+  palette:{
+    type: 'dark'
+  }
+});
 const themePrint = createMuiTheme({
   ...baseTheme,
   typography: {
@@ -24,10 +31,15 @@ const themePrint = createMuiTheme({
   },
 });
 
+
 const ThemeWithPrint = ({children}) => {
   const isPrintMedia = useMediaQuery('print')
+  let theme = themeWeb
+  if(isPrintMedia) theme = themePrint
+  // 
+  // else theme = themeDark
   return (
-    <ThemeProvider theme={isPrintMedia?themePrint:themeWeb}>
+    <ThemeProvider theme={theme}>
       {children}
     </ThemeProvider>
   )

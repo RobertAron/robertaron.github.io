@@ -31,7 +31,8 @@ const skills = {
     'Hadoop',
     'Spark',
     'Jupyter Notebooks',
-    'Visual Studio Code'
+    'Visual Studio Code',
+    "Android Studio"
   ],
   frameworks: [
     'React',

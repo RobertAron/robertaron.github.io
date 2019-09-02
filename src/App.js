@@ -7,26 +7,27 @@ import Contact from './components/Contact';
 import Projects from './components/Projects';
 import Achievements from './components/Achievements';
 import Education from './components/Education';
+import Sparkles from './components/Sparkles';
 
 const useStyles = makeStyles((theme) => createStyles({
   content:{
     minHeight: '100vh',
-    maxWidth: 'calc(100vh * .935)',
+    maxWidth: '900px',
     margin: 'auto',
-    // backgroundColor: '#2f3136',
-    backgroundColor: '#f1f1f1'
   },
   withSidebar: {
     display: 'flex',
     flexWrap: 'wrap',
+    position: 'relative'
   },
   sidebar: {
     flexBasis: '10rem',
     flexGrow: '1',
   },
   notSidebar: {
-    flexBasis: '0',
+    flexBasis: 0,
     flexGrow: '999',
+    minWidth: '30rem'
   }
 }))
 
@@ -46,6 +47,7 @@ const App = () => {
           <Projects/>
           <Education/>
         </div>
+        <Sparkles/>
       </div>
     </div>
   );

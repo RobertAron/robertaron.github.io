@@ -59,6 +59,7 @@ const projects = [
         ],
         tools: [
           "Git",
+          "Android Studio"
         ],
         frameworks: [
           'Android',
