@@ -35,7 +35,7 @@ const App = () => {
   const classes = useStyles()
   return (
     <div className={classes.content}>
-      <Header />
+      <Header/>
       <div className={classes.withSidebar}>
         <div className={classes.sidebar}>
           <Contact/>

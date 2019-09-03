@@ -1,9 +1,9 @@
 import React from 'react';
 import { Typography, Toolbar } from '@material-ui/core';
-import AppBar from '@material-ui/core/AppBar';
-import rIcon from '../images/R-Material-Icon.png'
-import { makeStyles, createStyles } from '@material-ui/core/styles';
-
+import AppBar from '@material-ui/core/AppBar'
+import { makeStyles, createStyles } from '@material-ui/core/styles'
+import { withRouter } from "react-router"
+import themes from '../Themes'
 
 const useStyles = makeStyles((theme) => createStyles({
     appBarSpacing: {
@@ -24,27 +24,38 @@ const useStyles = makeStyles((theme) => createStyles({
     lefItem:{
       minWidth: '0',
       minHeight: '0',
-      flex: '0 1 71px',
+      height: '77px',
       padding: theme.spacing(1),
       '& > img':{
-        width: '100%',
+        height: '100%',
         boxShadow: theme.shadows[3],
-        borderRadius: '3px'
+        borderRadius: '3px',
       }
     },
     spacer: {
       flex: '7 1 auto'
+    },
+    headerShadow:{
+      boxShadow: 'none'
+    },
+    '@media print':{
+      headerShadow: {
+        boxShadow: theme.shadows[4]
+      }
     }
   })
 )
 
-const Header = () => {
+const Header = (props) => {
   const classes = useStyles()
+  let company = props.match.params.company
+  company = themes[company]?company:"base"
+  const image = themes[company].image
   return (
-    <AppBar position="static">
-      <Toolbar classes={{ root: classes.appBarSpacing }}>
+    <AppBar position="static" className={classes.headerShadow}>
+      <Toolbar classes={{ root: classes.appBarSpacing }} disableGutters={true}>
         <div className={classes.lefItem}>
-          <img src={rIcon} alt='ico'/>
+          <img src={image} alt='ico'/>
         </div>
         <div className={classes.leftItem}>
           <Typography variant="h3" component="h1">
@@ -60,4 +71,4 @@ const Header = () => {
   )
 }
 
-export default Header
+export default withRouter(Header)

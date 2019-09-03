@@ -11,7 +11,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import ContentArea from './ContentArea';
 
 const contacts = [
-  { icon: <Email />, label: "Robert.Aron.TX@gmail.com" },
+  { icon: <Email />, label: "Contact@RobertAron.io" },
   { icon: <Phone />, label: "214-448-22263" },
   { icon: <LocationOn />, label: "Allen, Texas (Relocating)" },
   { icon: <Icon className='fa fa-globe' />, label: "RobertAron.io" },

@@ -3,53 +3,30 @@ import ReactDOM from 'react-dom'
 import './index.css'
 import App from './App'
 import * as serviceWorker from './serviceWorker'
-import { createMuiTheme } from '@material-ui/core/styles'
 import { ThemeProvider } from '@material-ui/styles'
 import { CssBaseline } from '@material-ui/core'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
-
-const baseTheme = {
-  palette:{
-    background: {
-      default: "#3f51b5"
-    },
-  },
-  spacing: 7
-}
-
-const themeWeb = createMuiTheme(baseTheme);
-const themeDark = createMuiTheme({
-  ...baseTheme,
-  palette:{
-    type: 'dark'
-  }
-});
-const themePrint = createMuiTheme({
-  ...baseTheme,
-  typography: {
-    fontSize: 12,
-  },
-});
+import { BrowserRouter as Router, Route } from "react-router-dom"
+import themes from './Themes'
 
 
-const ThemeWithPrint = ({children}) => {
-  const isPrintMedia = useMediaQuery('print')
-  let theme = themeWeb
-  if(isPrintMedia) theme = themePrint
-  // 
-  // else theme = themeDark
+const ThemeWithPrint = (props) => {
+  const isPrint = useMediaQuery('print')
+  let company = props.match.params.company
+  company = themes[company]?company:"base"
+  const pickedTheme = themes[company][isPrint?'print':'web']
   return (
-    <ThemeProvider theme={theme}>
-      {children}
+    <ThemeProvider theme={pickedTheme}>
+      <CssBaseline />
+      <App />
     </ThemeProvider>
   )
 }
 
 ReactDOM.render(
-  <ThemeWithPrint>
-    <CssBaseline />
-    <App />
-  </ThemeWithPrint>,
+  <Router>
+    <Route component={ThemeWithPrint} path="/:company?"/>
+  </Router>,
   document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change

@@ -1,7 +1,6 @@
 import React from 'react';
 import Sparkle from './Sparkle'
 import { makeStyles } from '@material-ui/core/styles';
-import useMediaQuery from '@material-ui/core/useMediaQuery'
 
 const variants = ["pop", "sparkle", "light", "cross"]
 
@@ -10,28 +9,27 @@ function getRandomVariant() {
 }
 
 // being lazy....
-const leftStyles = new Array(5).fill(null).map((ele,index)=>{
+const leftStyles = new Array(9).fill(null).map((ele,index)=>{
   const offsetHelper = index + 2
-  const offset = (offsetHelper+1**offsetHelper)%7
+  const offset = (offsetHelper+1**offsetHelper)%5
   return {
-    top: `${index*20+offset}%`,
+    top: `${index*11+offset}%`,
     left: `${offset}%`,
-    animationDelay: `${offset/10}s`
+    animationDelay: `${offset/5}s`
   }
 })
 
-const rightStyles = new Array(5).fill(null).map((ele,index)=>{
+const rightStyles = new Array(9).fill(null).map((ele,index)=>{
   const offsetHelper = index + 2
-  const offset = (offsetHelper**offsetHelper/2)%7
+  const offset = (offsetHelper**offsetHelper/2)%5
   return {
-    top: `${index*20+offset}%`,
+    top: `${index*11+offset}%`,
     right: `${offset}%`,
-    animationDelay: `${offset/10}s`
+    animationDelay: `${offset/5}s`
   }
 })
 
 const animationStyles = leftStyles.concat(rightStyles)
-console.log(animationStyles)
 
 const useStyles = makeStyles({
   root:{
@@ -39,20 +37,22 @@ const useStyles = makeStyles({
     top: 0,
     right: "-10%",
     bottom: 0,
-    left: "-10%"
+    left: "-10%",
+    zIndex: -1
   },
-  disabled:{
-    display:'none'
-  },
+  sparklesDisplay:{},
+  '@media print':{
+    sparklesDisplay:{
+      display:'none'
+    }
+  }
 })
 
 
 const Sparkles = () => {
   const classes = useStyles()
-  const isPrint = useMediaQuery('print')
-  const disabled = isPrint?` ${classes.disabled}`:''
   return(
-    <div className={`${classes.root}${disabled}`}>
+    <div className={`${classes.root} ${classes.sparklesDisplay}`}>
       {animationStyles.map((style,index)=>(
         <Sparkle variant={getRandomVariant()} style={style} key={index}/>
       ))}

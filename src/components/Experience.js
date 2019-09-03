@@ -23,7 +23,7 @@ const jobs = [
       "Developing front end user interfaces that allow users to easily generate analytics and documentation about big data.",
       "Spear-heading transition to AWS infrastructure.",
       "Facilitating linear scalability of big data.",
-      "Mentor/Train new team members."
+      "Mentor/train new team members."
     ]
   ),
   job(
