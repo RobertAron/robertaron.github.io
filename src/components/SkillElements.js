@@ -14,17 +14,14 @@ const useStyles = makeStyles((theme) => createStyles({
   languages: {
     color: '#fff',
     backgroundColor: green[500],
-    // backgroundColor: '#bb86fc',
   },
   tools: {
     color: '#fff',
     backgroundColor: deepPurple[700],
-    // backgroundColor: '#3700b3',
   },
   frameworks:{
     color: '#fff',
     backgroundColor: cyan[500],
-    // backgroundColor: '#03dac6',
   }
 }))
 

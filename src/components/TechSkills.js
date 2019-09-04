@@ -5,14 +5,14 @@ import ContentArea from './ContentArea'
 
 const skills = {
   languages: [
+    'C#',
+    'C++',
     'Javascript',
     'Python',
-    'C#',
     'Kotlin',
     'Scala',
     'Java',
     'Clojure',
-    'C++',
     'SQL',
     'HTML',
     'CSS'
@@ -35,10 +35,10 @@ const skills = {
     "Android Studio"
   ],
   frameworks: [
+    'Unity',
     'React',
     'React-Native',
     'Redux',
-    'Unity',
     'Express',
     'OpenGL',
     'Qt',

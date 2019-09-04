@@ -37,11 +37,6 @@ const useStyles = makeStyles((theme) => createStyles({
     },
     headerShadow:{
       boxShadow: 'none'
-    },
-    '@media print':{
-      headerShadow: {
-        boxShadow: theme.shadows[4]
-      }
     }
   })
 )

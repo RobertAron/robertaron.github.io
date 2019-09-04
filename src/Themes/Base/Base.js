@@ -1,4 +1,4 @@
-const mainColor = "#88ff99"
+const mainColor = "#3f51b5"
 const theme = {
   palette:{
     primary:{
