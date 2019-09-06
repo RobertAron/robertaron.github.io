@@ -6,7 +6,7 @@ import * as serviceWorker from './serviceWorker'
 import { ThemeProvider } from '@material-ui/styles'
 import { CssBaseline } from '@material-ui/core'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
-import { BrowserRouter as Router, Route } from "react-router-dom"
+import { HashRouter, Route } from "react-router-dom"
 import themes from './Themes'
 
 
@@ -24,9 +24,9 @@ const ThemeWithPrint = (props) => {
 }
 
 ReactDOM.render(
-  <Router>
+  <HashRouter >
     <Route component={ThemeWithPrint} path="/:company?"/>
-  </Router>,
+  </HashRouter >,
   document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change

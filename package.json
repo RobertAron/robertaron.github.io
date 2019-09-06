@@ -2,7 +2,7 @@
   "name": "resume-site-2019",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://robertaron.github.io/Resume",
+  "homepage": "https://robertaron.github.io/resume",
   "dependencies": {
     "@material-ui/core": "^4.3.2",
     "@material-ui/icons": "^4.2.1",
