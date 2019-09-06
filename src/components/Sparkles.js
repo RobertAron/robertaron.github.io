@@ -38,7 +38,7 @@ const useStyles = makeStyles({
     right: "-10%",
     bottom: 0,
     left: "-10%",
-    zIndex: 0
+    pointerEvents: 'none' 
   },
   sparklesDisplay:{},
   '@media print':{
