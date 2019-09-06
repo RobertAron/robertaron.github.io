@@ -6,7 +6,7 @@ const useStyles = makeStyles((theme) => createStyles({
     overflow:'hidden',
     margin: `${theme.spacing(1)}px ${theme.spacing(0.5)}px`,
     '& > *': {
-      margin: `${theme.spacing(.4)}px ${theme.spacing(1)}px`
+      margin: `${theme.spacing(.4)}px ${theme.spacing(1)}px !important`
     }
   }
 }))

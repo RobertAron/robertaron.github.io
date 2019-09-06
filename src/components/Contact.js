@@ -28,7 +28,7 @@ const Contact = () => {
   const classes = useStyles()
   return (
     <ContentArea title="Contact">
-      <List>
+      <List classes={{root: classes.listRoot}}>
         {contacts.map(ele => (
           <ListItem classes={{ root: classes.listItemRoot }} key={ele.label}>
             <ListItemIcon classes={{ root: classes.itemIconRoot }}>
