@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.eb5b3bba.chunk.css",
+    "main.js": "/static/js/main.f2216ada.chunk.js",
+    "main.js.map": "/static/js/main.f2216ada.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.7791fe9c.js",
+    "runtime~main.js.map": "/static/js/runtime~main.7791fe9c.js.map",
+    "static/js/2.ba1c8563.chunk.js": "/static/js/2.ba1c8563.chunk.js",
+    "static/js/2.ba1c8563.chunk.js.map": "/static/js/2.ba1c8563.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.bd6cb988d64c115392bbadee7ac104b6.js": "/precache-manifest.bd6cb988d64c115392bbadee7ac104b6.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.eb5b3bba.chunk.css.map": "/static/css/main.eb5b3bba.chunk.css.map",
+    "static/media/Base-Logo.png": "/static/media/Base-Logo.1c0289e9.png",
+    "static/media/Blizzard-Logo.jpg": "/static/media/Blizzard-Logo.7bc5f3a1.jpg"
+  }
+}
