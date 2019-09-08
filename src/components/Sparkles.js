@@ -8,28 +8,16 @@ function getRandomVariant() {
   return variants[Math.floor(Math.random()*variants.length)];
 }
 
-// being lazy....
-const leftStyles = new Array(9).fill(null).map((ele,index)=>{
+const leftStyles = new Array(19).fill(null).map((ele,index)=>{
   const offsetHelper = index + 2
   const offset = (offsetHelper+1**offsetHelper)%5
-  return {
-    top: `${index*11+offset}%`,
-    left: `${offset}%`,
+  const style = {
+    top: `${index*5+offset}%`,
     animationDelay: `${offset/5}s`
   }
+  index % 2 === 0 ? style['right'] = offset : style['left'] = offset
+  return style
 })
-
-const rightStyles = new Array(9).fill(null).map((ele,index)=>{
-  const offsetHelper = index + 2
-  const offset = (offsetHelper**offsetHelper/2)%5
-  return {
-    top: `${index*11+offset}%`,
-    right: `${offset}%`,
-    animationDelay: `${offset/5}s`
-  }
-})
-
-const animationStyles = leftStyles.concat(rightStyles)
 
 const useStyles = makeStyles({
   root:{
@@ -41,7 +29,7 @@ const useStyles = makeStyles({
     pointerEvents: 'none' 
   },
   sparklesDisplay:{},
-  '@media print':{
+  '@media print, (max-width:1200px)':{
     sparklesDisplay:{
       display:'none'
     }
@@ -51,9 +39,10 @@ const useStyles = makeStyles({
 
 const Sparkles = () => {
   const classes = useStyles()
+  console.log(leftStyles)
   return(
     <div className={`${classes.root} ${classes.sparklesDisplay}`}>
-      {animationStyles.map((style,index)=>(
+      {leftStyles.map((style,index)=>(
         <Sparkle variant={getRandomVariant()} style={style} key={index}/>
       ))}
     </div>

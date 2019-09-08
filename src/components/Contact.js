@@ -8,33 +8,37 @@ import LocationOn from '@material-ui/icons/LocationOn'
 import Icon from '@material-ui/core/Icon'
 import { ListItemText, createStyles } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import ContentArea from './ContentArea';
+import ContentArea from './ContentArea'
 
 const contacts = [
-  { icon: <Email />, label: "Contact@RobertAron.io" },
+  { icon: <Email />, label: "Contact@RobertAron.io", href: "mailto:Contact@RobertAron.io" },
   { icon: <Phone />, label: "214-448-22263" },
   { icon: <LocationOn />, label: "Allen, Texas (Relocating)" },
-  { icon: <Icon className='fa fa-globe' />, label: "RobertAron.io" },
-  { icon: <Icon className='fa fa-github' />, label: "Github.com/RobertAron" }
+  { icon: <Icon className='fa fa-globe' />, label: "RobertAron.io", href: 'https://RobertAron.io' },
+  { icon: <Icon className='fa fa-github' />, label: "Github.com/RobertAron", href: "https://Github.com/RobertAron" }
 ]
 
 const useStyles = makeStyles((theme) => createStyles({
   itemIconRoot: { minWidth: '30px' },
   listItemRoot: { padding: '0px', width: 'max-content' },
-  itemText: {display: 'block'}
+  itemText: { display: 'block' }
 }))
 
 const Contact = () => {
   const classes = useStyles()
   return (
     <ContentArea title="Contact">
-      <List classes={{root: classes.listRoot}}>
+      <List classes={{ root: classes.listRoot }}>
         {contacts.map(ele => (
-          <ListItem classes={{ root: classes.listItemRoot }} key={ele.label}>
+          <ListItem
+            classes={{ root: classes.listItemRoot }}
+            key={ele.label}
+            component={'a'}
+            href={ele.href}>
             <ListItemIcon classes={{ root: classes.itemIconRoot }}>
               {ele.icon}
             </ListItemIcon>
-            <ListItemText primary={ele.label} className={classes.itemText}/>
+            <ListItemText primary={ele.label} className={classes.itemText} />
           </ListItem>
         ))}
       </List>
