@@ -15,7 +15,8 @@ const skills = {
     'Clojure',
     'SQL',
     'HTML',
-    'CSS'
+    'CSS',
+    'GLSL',
   ],
   tools: [
     'Amazon Web Services (AWS)',
