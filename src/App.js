@@ -20,15 +20,14 @@ const useStyles = makeStyles((theme) => createStyles({
   withSidebar: {
     display: 'flex',
     flexWrap: 'wrap',
-    position: 'relative'
+    position: 'relative',
+    width: 'fit-content'
   },
   sidebar: {
-    flexBasis: '10rem',
-    flexGrow: '1',
+    flex: '1 1 10rem'
   },
   notSidebar: {
-    flexBasis: 0,
-    flexGrow: '999',
+    flex: '999 0 30rem',
     minWidth: '30rem'
   },
   keepBackgroundColor:{
@@ -49,10 +48,10 @@ const App = () => {
             <Achievements/>
           </div>
           <div className={classes.notSidebar}>
+            {/* <CoverLetter/> */}
             <Experience/>
             <Projects/>
             <Education/>
-            {/* <CoverLetter/> */}
           </div>
           <Sparkles/>
         </div>

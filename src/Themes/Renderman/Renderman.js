@@ -1,3 +1,3 @@
 import makeBasicTheme from '../makeBasicTheme'
-const mainColor = "#3f51b5"
+const mainColor = "#0095f8"
 export default makeBasicTheme(mainColor)

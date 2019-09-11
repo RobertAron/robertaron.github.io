@@ -2,7 +2,9 @@ import baseStyle from './Base/Base'
 import baseImage from './Base/Base-Logo.png'
 import blizzardStyle from './Blizzard/Blizzard'
 import blizzardImage from './Blizzard/Blizzard-Logo.jpg'
-import { createMuiTheme } from '@material-ui/core';
+import rendermanStyle from './Renderman/Renderman'
+import rendermanImage from './Renderman/Renderman-Logo.jpg'
+import { createMuiTheme } from '@material-ui/core'
 
 const printTheme = {
   typography: {
@@ -35,5 +37,6 @@ const makeTheme = (style,image) => {
 
 export default {
   base: makeTheme(baseStyle,baseImage),
-  blizzard: makeTheme(blizzardStyle,blizzardImage)
+  blizzard: makeTheme(blizzardStyle,blizzardImage),
+  renderman: makeTheme(rendermanStyle,rendermanImage)
 }
