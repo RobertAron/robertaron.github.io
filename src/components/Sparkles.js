@@ -39,7 +39,6 @@ const useStyles = makeStyles({
 
 const Sparkles = () => {
   const classes = useStyles()
-  console.log(leftStyles)
   return(
     <div className={`${classes.root} ${classes.sparklesDisplay}`}>
       {leftStyles.map((style,index)=>(

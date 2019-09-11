@@ -4,8 +4,9 @@ import blizzardStyle from './Blizzard/Blizzard'
 import blizzardImage from './Blizzard/Blizzard-Logo.jpg'
 import rendermanStyle from './Renderman/Renderman'
 import rendermanImage from './Renderman/Renderman-Logo.jpg'
+import riotStyle from './RiotGames/RiotGames'
+import riotImage from './RiotGames/RiotGames-Logo.png'
 import { createMuiTheme } from '@material-ui/core'
-
 const printTheme = {
   typography: {
     fontSize: 12,
@@ -38,5 +39,6 @@ const makeTheme = (style,image) => {
 export default {
   base: makeTheme(baseStyle,baseImage),
   blizzard: makeTheme(blizzardStyle,blizzardImage),
-  renderman: makeTheme(rendermanStyle,rendermanImage)
+  renderman: makeTheme(rendermanStyle,rendermanImage),
+  'riot-games': makeTheme(riotStyle,riotImage)
 }

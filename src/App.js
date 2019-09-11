@@ -8,6 +8,7 @@ import Projects from './components/Projects';
 import Achievements from './components/Achievements';
 import Education from './components/Education';
 import Sparkles from './components/Sparkles';
+// eslint-disable-next-line no-unused-vars
 import CoverLetter from './components/CoverLetter'
 
 const useStyles = makeStyles((theme) => createStyles({

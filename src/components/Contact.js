@@ -9,14 +9,15 @@ import Icon from '@material-ui/core/Icon'
 import { ListItemText, createStyles } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import ContentArea from './ContentArea'
+import { withRouter } from "react-router"
 
-const contacts = [
+const contacts = (pathName) => ([
   { icon: <Email />, label: "Contact@RobertAron.io", href: "mailto:Contact@RobertAron.io" },
   { icon: <Phone />, label: "214-448-22263" },
   { icon: <LocationOn />, label: "Allen, Texas (Relocating)" },
-  { icon: <Icon className='fa fa-globe' />, label: "RobertAron.io", href: 'https://RobertAron.io' },
+  { icon: <Icon className='fa fa-globe' />, label: "RobertAron.io", href: `https://RobertAron.io/#${pathName}` },
   { icon: <Icon className='fa fa-github' />, label: "Github.com/RobertAron", href: "https://Github.com/RobertAron" }
-]
+])
 
 const useStyles = makeStyles((theme) => createStyles({
   itemIconRoot: { minWidth: '30px' },
@@ -24,12 +25,13 @@ const useStyles = makeStyles((theme) => createStyles({
   itemText: { display: 'block' }
 }))
 
-const Contact = () => {
+const Contact = (props) => {
+  const pathName = props.location.pathname
   const classes = useStyles()
   return (
     <ContentArea title="Contact">
       <List classes={{ root: classes.listRoot }}>
-        {contacts.map(ele => (
+        {contacts(pathName).map(ele => (
           <ListItem
             classes={{ root: classes.listItemRoot }}
             key={ele.label}
@@ -46,4 +48,4 @@ const Contact = () => {
   )
 }
 
-export default Contact
+export default withRouter(Contact)

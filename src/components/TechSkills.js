@@ -33,7 +33,8 @@ const skills = {
     'Spark',
     'Jupyter Notebooks',
     'Visual Studio Code',
-    "Android Studio"
+    "Android Studio",
+    'Kubernetes'
   ],
   frameworks: [
     'Unity',
