@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c1e84e9d0dfd8df8b618c9b5ccaa53e5",
+    "revision": "8dc7ce496def2b31c3fba27037618ef3",
     "url": "/index.html"
   },
   {
-    "revision": "a217b6725649a0a76b69",
+    "revision": "0904d7384c905ecb1d9b",
     "url": "/static/css/main.eb5b3bba.chunk.css"
   },
   {
-    "revision": "9ddc71cb26dcb4fa62f2",
-    "url": "/static/js/2.ba1c8563.chunk.js"
+    "revision": "302d8bd7646b2a584c3f",
+    "url": "/static/js/2.f0809108.chunk.js"
   },
   {
-    "revision": "a217b6725649a0a76b69",
-    "url": "/static/js/main.11eb108d.chunk.js"
+    "revision": "0904d7384c905ecb1d9b",
+    "url": "/static/js/main.915587cf.chunk.js"
   },
   {
     "revision": "cac7a6a49329c2134334",
@@ -26,5 +26,9 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "3ffd1528f1466f1124e6f01e1c9f4ed3",
     "url": "/static/media/Blizzard-Logo.3ffd1528.jpg"
+  },
+  {
+    "revision": "2026cc95b240db74adc10211e64d5cb7",
+    "url": "/static/media/Renderman-Logo.2026cc95.jpg"
   }
 ]);
