@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8dc7ce496def2b31c3fba27037618ef3",
+    "revision": "0ca8a08d62e560ce45af706112ffabc2",
     "url": "/index.html"
   },
   {
-    "revision": "0904d7384c905ecb1d9b",
+    "revision": "88afadca5f7997f7f069",
     "url": "/static/css/main.eb5b3bba.chunk.css"
   },
   {
-    "revision": "302d8bd7646b2a584c3f",
-    "url": "/static/js/2.f0809108.chunk.js"
+    "revision": "13cbbb45fe711118c73e",
+    "url": "/static/js/2.77c814dd.chunk.js"
   },
   {
-    "revision": "0904d7384c905ecb1d9b",
-    "url": "/static/js/main.915587cf.chunk.js"
+    "revision": "88afadca5f7997f7f069",
+    "url": "/static/js/main.2e071ace.chunk.js"
   },
   {
     "revision": "cac7a6a49329c2134334",
@@ -30,5 +30,9 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "2026cc95b240db74adc10211e64d5cb7",
     "url": "/static/media/Renderman-Logo.2026cc95.jpg"
+  },
+  {
+    "revision": "a5079a020b67f5b9f1cd08ca9d8afb53",
+    "url": "/static/media/RiotGames-Logo.a5079a02.png"
   }
 ]);
