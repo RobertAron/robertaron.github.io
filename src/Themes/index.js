@@ -7,6 +7,9 @@ import rendermanImage from './Renderman/Renderman-Logo.jpg'
 import riotStyle from './RiotGames/RiotGames'
 import riotImage from './RiotGames/RiotGames-Logo.png'
 import { createMuiTheme } from '@material-ui/core'
+import appleStyle from './Apple/Apple'
+import appleLogo from './Apple/Apple-Logo.png'
+
 const printTheme = {
   typography: {
     fontSize: 12,
@@ -40,5 +43,6 @@ export default {
   base: makeTheme(baseStyle,baseImage),
   blizzard: makeTheme(blizzardStyle,blizzardImage),
   renderman: makeTheme(rendermanStyle,rendermanImage),
-  'riot-games': makeTheme(riotStyle,riotImage)
+  'riot-games': makeTheme(riotStyle,riotImage),
+  apple: makeTheme(appleStyle,appleLogo)
 }
