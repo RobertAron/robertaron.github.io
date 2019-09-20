@@ -9,6 +9,8 @@ import riotImage from './RiotGames/RiotGames-Logo.png'
 import { createMuiTheme } from '@material-ui/core'
 import appleStyle from './Apple/Apple'
 import appleLogo from './Apple/Apple-Logo.png'
+import iZotopeLogo from './iZotope/iZotope-Logo.png'
+import iZotopeStyle from './iZotope/iZotope'
 
 const printTheme = {
   typography: {
@@ -44,5 +46,6 @@ export default {
   blizzard: makeTheme(blizzardStyle,blizzardImage),
   renderman: makeTheme(rendermanStyle,rendermanImage),
   'riot-games': makeTheme(riotStyle,riotImage),
-  apple: makeTheme(appleStyle,appleLogo)
+  apple: makeTheme(appleStyle,appleLogo),
+  izotope: makeTheme(iZotopeStyle,iZotopeLogo)
 }
