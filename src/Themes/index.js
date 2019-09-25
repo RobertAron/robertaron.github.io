@@ -11,6 +11,8 @@ import appleStyle from './Apple/Apple'
 import appleLogo from './Apple/Apple-Logo.png'
 import iZotopeLogo from './iZotope/iZotope-Logo.png'
 import iZotopeStyle from './iZotope/iZotope'
+import facebookLogo from './Facebook/Facebook-Logo.png'
+import facebookStyle from './Facebook/Facebook'
 
 const printTheme = {
   typography: {
@@ -47,5 +49,6 @@ export default {
   renderman: makeTheme(rendermanStyle,rendermanImage),
   'riot-games': makeTheme(riotStyle,riotImage),
   apple: makeTheme(appleStyle,appleLogo),
-  izotope: makeTheme(iZotopeStyle,iZotopeLogo)
+  izotope: makeTheme(iZotopeStyle,iZotopeLogo),
+  facebook: makeTheme(facebookStyle,facebookLogo)
 }
