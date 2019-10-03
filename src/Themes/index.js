@@ -13,6 +13,8 @@ import iZotopeLogo from './iZotope/iZotope-Logo.png'
 import iZotopeStyle from './iZotope/iZotope'
 import facebookLogo from './Facebook/Facebook-Logo.png'
 import facebookStyle from './Facebook/Facebook'
+import NexonLogo from './Nexon/Nexon-Logo.jpg'
+import Nexon from './Nexon/Nexon'
 
 const printTheme = {
   typography: {
@@ -50,5 +52,6 @@ export default {
   'riot-games': makeTheme(riotStyle,riotImage),
   apple: makeTheme(appleStyle,appleLogo),
   izotope: makeTheme(iZotopeStyle,iZotopeLogo),
-  facebook: makeTheme(facebookStyle,facebookLogo)
+  facebook: makeTheme(facebookStyle,facebookLogo),
+  nexon: makeTheme(Nexon,NexonLogo)
 }
