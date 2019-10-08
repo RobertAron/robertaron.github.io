@@ -13,6 +13,7 @@ import themes from './Themes'
 const ThemeWithPrint = (props) => {
   const isPrint = useMediaQuery('print')
   let company = props.match.params.company
+  company = company?company.toLowerCase():''
   company = themes[company]?company:"base"
   const pickedTheme = themes[company][isPrint?'print':'web']
   return (

@@ -49,10 +49,10 @@ const App = () => {
             <Achievements/>
           </div>
           <div className={classes.notSidebar}>
-            <CoverLetter/>
-            {/* <Experience/>
+            {/* <CoverLetter/> */}
+            <Experience/>
             <Projects/>
-            <Education/> */}
+            <Education/>
           </div>
           <Sparkles/>
         </div>

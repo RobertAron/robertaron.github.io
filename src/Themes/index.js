@@ -15,6 +15,8 @@ import facebookLogo from './Facebook/Facebook-Logo.png'
 import facebookStyle from './Facebook/Facebook'
 import NexonLogo from './Nexon/Nexon-Logo.jpg'
 import Nexon from './Nexon/Nexon'
+import EALogo from './EA/EA-Logo.jpg'
+import EA from './EA/EA'
 
 const printTheme = {
   typography: {
@@ -53,5 +55,6 @@ export default {
   apple: makeTheme(appleStyle,appleLogo),
   izotope: makeTheme(iZotopeStyle,iZotopeLogo),
   facebook: makeTheme(facebookStyle,facebookLogo),
-  nexon: makeTheme(Nexon,NexonLogo)
+  nexon: makeTheme(Nexon,NexonLogo),
+  ea: makeTheme(EA,EALogo)
 }

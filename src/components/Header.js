@@ -44,6 +44,7 @@ const useStyles = makeStyles((theme) => createStyles({
 const Header = (props) => {
   const classes = useStyles()
   let company = props.match.params.company
+  company = company?company.toLowerCase():''
   company = themes[company]?company:"base"
   const image = themes[company].image
   return (
