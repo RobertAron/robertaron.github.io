@@ -9,7 +9,7 @@ import Achievements from './components/Achievements';
 import Education from './components/Education';
 import Sparkles from './components/Sparkles';
 // eslint-disable-next-line no-unused-vars
-import CoverLetter from './components/CoverLetter'
+// import CoverLetter from './components/CoverLetter'
 
 const useStyles = makeStyles((theme) => createStyles({
   content:{
@@ -25,6 +25,7 @@ const useStyles = makeStyles((theme) => createStyles({
     width: 'fit-content'
   },
   sidebar: {
+    minWidth:'260px',
     flex: '1 1 10rem'
   },
   notSidebar: {
