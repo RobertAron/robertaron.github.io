@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => createStyles({
   },
   notSidebar: {
     flex: '999 0 30rem',
-    minWidth: '30rem'
+    maxWidth: '100%'
   },
   keepBackgroundColor:{
     backgroundColor: theme.palette.background.default
