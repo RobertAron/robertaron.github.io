@@ -34,7 +34,9 @@ const skills = {
     'Jupyter Notebooks',
     'Visual Studio Code',
     "Android Studio",
-    'Kubernetes'
+    'Kubernetes',
+    'Google Cloud',
+    'Github Actions'
   ],
   frameworks: [
     'Unity',

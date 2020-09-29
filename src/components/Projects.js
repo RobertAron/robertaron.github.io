@@ -1,69 +1,49 @@
 import React from 'react';
 import ProjectDetail from './ProjectDetail'
 import ContentArea from './ContentArea'
-const project = ( title, skills, description ) => ({
+const project = ( title,description, skills, link ) => ({
   title,
   skills,
-  description
+  description,
+  link
 })
 
 const projects = [
   project(
-    "Square Squash",
+    "Beam Battle Online",
+    "Online battle royale game you can play in a web browser. Play to be the last survior by staying within slowly collapsing dome, and avoiding running into other players light trails.",
     {
-      languages: [
-        'Javascript',
-        'C#',
-      ],
+      languages:['C#','Javascript'],
+      tools:['Terraform','Google Cloud','Github Actions'],
+      frameworks:['Unity']
+    },
+    'https://www.robertaron.io/BeamBattleOnline/'
+  ),
+  project(
+    "Square Squash", 
+    "Cute mobile puzzle game available on the Google Play Store and Apple App Store. The game features quick rounds in which players rush to clear as many blocks as possible. High scores are hosted in an online leaderboard.",
+    {
+      languages: [ 'Javascript', 'C#' ],
       tools: [
         'Amazon Web Services (AWS)',
         'API Gateway',
         'Lambda',
         'Cloud Formation',
         'Relational Database Service (RDS)',
-        'Git',
         'Serverless (SLS)',
-        'Visual Studio Code'
       ],
-      frameworks: [
-        'Unity',
-      ]
+      frameworks: [ 'Unity' ]
     },
-    "Cute mobile puzzle game available on the Google Play Store and Apple App Store. The game features quick rounds in which players rush to clear as many blocks as possible. High scores are hosted in an online leaderboard."
+    'https://play.google.com/store/apps/details?id=com.FraternalStudios.SquareSquash&hl=en_US'
   ),
   project(
     "Cable Driven Robot",
+    "Robot which uses 8 cables that extend and retract as the means to move an end effector. Users insert keyframe positional information into the UI, which displays the path the robot will move. After submitting the points, the robot moves along the desired path.",
     {
-      languages: [
-        'C++',
-      ],
-      tools: [
-        'Git',
-      ],
-      frameworks: [
-        'Qt',
-        'Arduino',
-        'OpenGL',
-      ]
+      languages: [ 'C++', ],
+      tools: [ 'Git', ],
+      frameworks: [ 'Qt', 'Arduino', 'OpenGL',]
     },
-    "Robot which uses 8 cables that extend and retract as the means to move an end effector. Users insert keyframe positional information into the UI, which will display the path the robot will move. After submitting the points, the robot will move along the desired path."
-  ),
-  project(
-    "UTA Now",
-    {
-      languages: [
-        'Kotlin',
-        'SQL',
-      ],
-      tools: [
-        "Git",
-        "Android Studio"
-      ],
-      frameworks: [
-        'Android',
-      ]
-    },
-    "Mobile application which enables users to share and explore events happening around UTA. Users can  create, comment on, and RSVP for events."
   )
 ]
 

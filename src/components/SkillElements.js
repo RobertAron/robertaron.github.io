@@ -13,15 +13,15 @@ const useStyles = makeStyles((theme) => createStyles({
   },
   languages: {
     color: '#fff',
-    backgroundColor: green[500],
+    backgroundColor: '#1a90ea',
   },
   tools: {
     color: '#fff',
-    backgroundColor: deepPurple[700],
+    backgroundColor: '#ea1a1a',
   },
   frameworks:{
     color: '#fff',
-    backgroundColor: cyan[500],
+    backgroundColor: '#44b329',
   }
 }))
 

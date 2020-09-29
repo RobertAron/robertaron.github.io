@@ -2,9 +2,9 @@ import React from 'react';
 import { Typography } from '@material-ui/core';
 import { SkillElement } from './SkillElements';
 
-const ProjectDetail = ({ title, skills, description }) => (
+const ProjectDetail = ({ title, skills, description, link }) => (
   <>
-    <Typography variant="h6" component="h3">
+    <Typography variant="h6" component="h3" href={link} component={(link && 'a')}>
       {title}
     </Typography>
     <div>
