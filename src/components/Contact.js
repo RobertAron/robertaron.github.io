@@ -13,7 +13,7 @@ import { withRouter } from "react-router"
 
 const contacts = (pathName) => ([
   { icon: <Email />, label: "Contact@RobertAron.io", href: "mailto:Contact@RobertAron.io" },
-  { icon: <Phone />, label: "214-448-22263" },
+  { icon: <Phone />, label: "214-448-2263" },
   { icon: <LocationOn />, label: "Allen, Texas" },
   { icon: <Icon className='fa fa-globe' />, label: "RobertAron.io", href: `https://RobertAron.io/#${pathName}` },
   { icon: <Icon className='fa fa-github' />, label: "Github.com/RobertAron", href: "https://Github.com/RobertAron" }
