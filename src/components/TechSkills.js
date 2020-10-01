@@ -5,9 +5,9 @@ import ContentArea from './ContentArea'
 
 const skills = {
   languages: [
+    'Javascript',
     'C#',
     'C++',
-    'Javascript',
     'Python',
     'Kotlin',
     'Scala',
@@ -39,10 +39,10 @@ const skills = {
     'Github Actions'
   ],
   frameworks: [
-    'Unity',
     'React',
     'React-Native',
     'Redux',
+    'Unity',
     'Express',
     'OpenGL',
     'Qt',
