@@ -16,11 +16,12 @@ const contacts = (pathName) => ([
   { icon: <Phone />, label: "214-448-2263" },
   { icon: <LocationOn />, label: "Allen, Texas" },
   { icon: <Icon className='fa fa-globe' />, label: "RobertAron.io", href: `https://RobertAron.io/#${pathName}` },
-  { icon: <Icon className='fa fa-github' />, label: "Github.com/RobertAron", href: "https://Github.com/RobertAron" }
+  { icon: <Icon className="fab fa-codepen" />, label: "Codepen.io/RobertAron", href: "https://codepen.io/RobertAron" },
+  { icon: <Icon className='fa fa-github' />, label: "Github.com/RobertAron", href: "https://Github.com/RobertAron" },
 ])
 
 const useStyles = makeStyles((theme) => createStyles({
-  itemIconRoot: { minWidth: '30px' },
+  itemIconRoot: { minWidth: '30px', display: 'block' },
   listItemRoot: { padding: '0px', width: 'max-content' },
   itemText: { display: 'block' }
 }))

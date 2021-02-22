@@ -18,11 +18,12 @@ const jobs = [
     "State Farm",
     "January 2018 - Now",
     "Richardson, Texas",
-    "Member of the Big Data Tooling and Infrastructure Team",
+    "Full Stack Developer",
     [
-      "Developing front end user interfaces that allow users to easily generate analytics and documentation about big data.",
-      "Spear-heading transition to AWS infrastructure.",
-      "Mentor and training other developers."
+      "Design and Develop react application to allow users to quickly gain insights on big data.",
+      "Develop Python & Node APIs (hosted in AWS) that interface with autoscaling Big Data applications",
+      "Develop and maintain Typescript SDK to interface with rest APIs",
+      "Mentor and train other developers in typescript,react, postgreSQL, and other related technologies."
     ]
   ),
   job(
