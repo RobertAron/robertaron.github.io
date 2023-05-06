@@ -1,7 +1,7 @@
 import React from 'react';
 import Paper from '@material-ui/core/Paper';
 import { makeStyles, createStyles } from '@material-ui/core/styles';
-import { deepPurple, green, cyan } from '@material-ui/core/colors';
+
 
 const useStyles = makeStyles((theme) => createStyles({
   skillItem: {
@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => createStyles({
     color: '#fff',
     backgroundColor: '#ea1a1a',
   },
-  frameworks:{
+  "frameworks/libraries":{
     color: '#fff',
     backgroundColor: '#44b329',
   }

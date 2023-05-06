@@ -14,11 +14,31 @@ const job = (title,company,dates,location,team,responsibilities) =>({
 
 const jobs = [
   job(
-    "Senior Software Engineer",
+    "Senior Full-stack Developer",
+    "thatgamecompany",
+    "July 2021 - Now",
+    "Remote",
+    "IT Services",
+    [
+      "Game admin tooling to manage player accounts, investigate reports, send in game annoucements.",
+      "Create tooling to provide analytics player behavior and experience.",
+      "Anything there isn't a dedicated group to work on (like a companion app!)",
+    ]
+  ),
+  job(
+    "Software Engineer",
+    "Saatva",
+    "April 2021 - July 2021",
+    "Remote",
+    "",
+    ["Work on user facing website. Implement designs by working with UI/UX team. Update and connect with CMS."]
+  ),
+  job(
+    "Software Engineer",
     "State Farm",
-    "January 2018 - Now",
+    "January 2018 - April 2021",
     "Richardson, Texas",
-    "Full Stack Developer",
+    "Internal 'big data' tooling",
     [
       "Design and Develop react application to allow users to quickly gain insights on big data.",
       "Develop Python & Node APIs (hosted in AWS) that interface with autoscaling Big Data applications",
