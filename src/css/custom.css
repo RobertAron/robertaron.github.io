@@ -10,26 +10,27 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-color-primary: #10607f;
+  --ifm-color-primary-dark: #0e5672;
+  --ifm-color-primary-darker: #0e526c;
+  --ifm-color-primary-darkest: #0b4359;
+  --ifm-color-primary-light: #126a8c;
+  --ifm-color-primary-lighter: #126e92;
+  --ifm-color-primary-lightest: #157da5;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
+[data-theme="dark"] {
+  --ifm-color-primary: #08d9db;
+  --ifm-color-primary-dark: #07c3c5;
+  --ifm-color-primary-darker: #07b8ba;
+  --ifm-color-primary-darkest: #069899;
+  --ifm-color-primary-light: #09eff1;
+  --ifm-color-primary-lighter: #0ff4f6;
+  --ifm-color-primary-lightest: #30f6f7;
+  --ifm-footer-background-color: #545a73;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
@@ -41,17 +42,23 @@
 }
 
 .disable-ring:focus {
-  outline:none;
+  outline: none;
 }
-
 
 .table-of-contents {
-  font-size:1.1rem;
+  font-size: 1.1rem;
 }
+
+.hero--primary {
+  --ifm-hero-background-color: var(--ifm-color-primary-darker);
+}
+
 /* docItemCol_node_modules-@docusaurus-theme-classic-lib-theme-DocItem-Layout-styles-module */
 
 @media (min-width: 997px) {
-  main .docItemCol_node_modules-\@docusaurus-theme-classic-lib-theme-DocItem-Layout-styles-module {
-    max-width: 60% !important;
+  main
+    .docItemCol_node_modules-\@docusaurus-theme-classic-lib-theme-DocItem-Layout-styles-module {
+      margin: auto;
+      max-width: 60% !important;
   }
 }

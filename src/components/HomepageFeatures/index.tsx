@@ -1,13 +1,20 @@
 import Heading from "@theme/Heading";
-import clsx from "clsx";
-import { Gamepad2, type LucideProps, Network, PanelsTopLeft, Rotate3D } from "lucide-react";
+import {
+  Gamepad2,
+  type LucideProps,
+  Network,
+  PanelsTopLeft,
+  Rotate3D,
+} from "lucide-react";
 import type React from "react";
 import styles from "./styles.module.css";
 
 type FeatureItem = {
   title: string;
   description: JSX.Element;
-  icon: React.ForwardRefExoticComponent<Omit<LucideProps, "ref"> & React.RefAttributes<SVGSVGElement>>;
+  icon: React.ForwardRefExoticComponent<
+    Omit<LucideProps, "ref"> & React.RefAttributes<SVGSVGElement>
+  >;
 };
 
 const featureList: FeatureItem[] = [
@@ -18,17 +25,29 @@ const featureList: FeatureItem[] = [
   },
   {
     title: "Website Development",
-    description: <>Experienced in creating and maintaining websites, both frontend and backend.</>,
+    description: (
+      <>
+        Experienced in creating and maintaining websites, both frontend and
+        backend.
+      </>
+    ),
     icon: PanelsTopLeft,
   },
   {
     title: "Backend Development",
-    description: <>Proficient in server-side logic, database management, and API integration.</>,
+    description: (
+      <>
+        Proficient in server-side logic, database management, and API
+        integration.
+      </>
+    ),
     icon: Network,
   },
   {
     title: "Video Game Development",
-    description: <>Expertise in game design, programming, and project collaboration.</>,
+    description: (
+      <>Expertise in game design, programming, and project collaboration.</>
+    ),
     icon: Gamepad2,
   },
 ];
@@ -36,8 +55,8 @@ const featureList: FeatureItem[] = [
 function Feature({ title, description, icon: Icon }: FeatureItem) {
   return (
     <div className="flex items-start gap-8">
-      <div className="flex rounded-lg border-4 border-purple-400 border-solid bg-purple-900 p-2">
-        <Icon className="h-10 w-10 text-purple-100" />
+      <div className="flex rounded-lg border-4 border-solid border-[#08d9db] bg-[#175377] p-2">
+        <Icon className="h-10 w-10 text-white" />
       </div>
       <div className="flex flex-col gap-2">
         <Heading as="h3" className="mb-0 text-4xl">

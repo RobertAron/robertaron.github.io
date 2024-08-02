@@ -12,9 +12,8 @@ Have you ever gotten one of those security tests where they send you a text? Whi
 
 They usually come hand-in-hand with this super unique input type where you can only type one character at a time! Here are some of the big tech sites using them.
 
-![Disney 8 character OTP](./img/disney.png)
-![Twitch 6 character OTP](./img/twitch.png)
-
+<>![Disney 8 character OTP](./img/disney.png)</>
+<>![Twitch 6 characterOTP](./img/twitch.png)</>
 ## What's the purpose?
 
 They look cool! More importantly though they help match the code they recieved into the input. Just like when you're a kid playing with those block toys where you need to slot the right shape into the right hole.
@@ -63,12 +62,13 @@ function onSubmit(e) {
 
 Ok the behavior code looks a bit scary. It's not too bad though. There are two key overrides that are setup.
 
-
 _User hits backspace_
+
 - If the current input already has text in it, just let the event go as normal!
 - If there's no content in this input, focus the previous element. This focus actually occrus _before_ removing the character. That means if you backspace in the empty input, the previous character will be removed.
 
 _User inputs text_
+
 1. Insert the first character of the user action into the input.
 2. Focus the next element. Fire off a new input event with the _rest_ of the characters.
 

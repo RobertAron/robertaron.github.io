@@ -5,13 +5,13 @@ const MyMdxComponents: typeof MDXComponents = {
   ...MDXComponents,
   p: (props) => <p className="text-[calc(1.25rem)]">{props.children}</p>,
   blockquote: (props) => (
-    <blockquote className="border-blue-400 border-l-8 bg-blue-500/10 p-4 px-3">
+    <blockquote className="border-l-8 border-[#489b61] bg-[#489b61]/10 p-4 px-3">
       {props.children}
     </blockquote>
   ),
   img: (props: { alt: string; src: string; width: number; height: number }) => (
     <figure className="mb-4 flex flex-col items-center gap-1 text-sm italic">
-      <MDXComponents.img {...props} clasName="w-full" />
+      <MDXComponents.img {...props} className="w-full" />
       <figcaption>{props.alt}</figcaption>
     </figure>
   ),
