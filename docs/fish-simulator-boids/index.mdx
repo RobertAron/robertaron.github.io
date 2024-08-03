@@ -8,10 +8,8 @@ import { BoidsMain } from "./_boids/BoidsMain";
 
 Boids refers to a way to simulate how animals move to together in groups. Specifically, it's usually used in references to fishes or birds. Basically - it's how birds flock.
 
-<>
-  ![Photo of birds a large number of birds flocking. Photo by James
-  Wainscoat](./img/birds-flocking.webp)
-</>
+{/* prettier-ignore */}
+<>![Photo of birds a large number of birds flocking. Photo by James Wainscoat](./img/birds-flocking.webp)</>
 
 ## The Rules of Boids
 
@@ -21,7 +19,8 @@ There are only three forces neccsairy for implementing boids, so it's not to har
 
 Boids tend to want to clump together. You can think of this force a little like gravity or magnets. The closer the boids are together, the stronger this force becomes.
 
-![Diagram of boids force #1](./img/Boids_Force1.svg)
+{/* prettier-ignore */}
+<>![Diagram of boids force #1](./img/Boids_Force1.svg)</>
 
 ```ts
 const tempCohesion = new THREE.Vector3(0, 0, 0);
@@ -56,7 +55,8 @@ Boids _do not_ want to colide with one another. Thinking about animals this make
 
 As two boids get close to one other there should be a repelling force between them. This force should scale such that the two elements (typically) don't colide with one another.
 
-![Diagram of boids force #2](./img/Boids_Force2.svg)
+{/* prettier-ignore */}
+<>![Diagram of boids force #2](./img/Boids_Force2.svg)</>
 
 ```ts
 const tempSeparation = new THREE.Vector3(0, 0, 0);
@@ -90,7 +90,8 @@ function applySeparationForces(
 
 In my opinion this is the most complicated force. This one aligns the motion of boids with one another. The boids will tend to steer in a similar direction to keep themselves moving in a similar direction.
 
-![Diagram of boids force #3](./img/Boids_Force3.svg)
+{/* prettier-ignore */}
+<>![Diagram of boids force #3](./img/Boids_Force3.svg)</>
 
 ```ts
 const tempAlignmentDirection = new THREE.Vector3();
@@ -120,7 +121,8 @@ Now that conceptually we know what makes up boids lets fill in a few gaps when i
 Without some kind of aditional forces in play it's pretty likely we'll make a groups of boids that fly off into the distance.
 For my implementation I'll keep it simple. There will be a sphere that pushes the little fishies back together if they get too far away from the center.
 
-![Diagram showing force that will be applied when a boid is out of bounds](./img/AquariumForce.svg)
+{/* prettier-ignore */}
+<>![Diagram showing force that will be applied when a boid is out of bounds](./img/AquariumForce.svg)</>
 
 ### Instancing
 
@@ -146,7 +148,8 @@ If we define our forces in a way that they drop to 0 when further than 10 meters
 
 We break our coordinates up into grids of 10 units. Boids in one grid could be within 10 meters of boids in the adjacent grids, but not the ones further than that. Here's what that looks like:
 
-![Reducing the number of other boids that need to be compared.](./img/SpacialPartitioningDiagram.svg)
+{/* prettier-ignore */}
+<>![Reducing the number of other boids that need to be compared.](./img/SpacialPartitioningDiagram.svg)</>
 
 In the above diagram...
 
@@ -222,3 +225,5 @@ function createNearbyGraph(allFish: Fish[], distance: number) {
 For my implementation I'll be using [`react three fiber`](https://github.com/pmndrs/react-three-fiber). It's a way to tie together `react.js` and `three.js`
 
 <BoidsMain />
+
+A little bit off topic but I find it super mezmerizing to look at them swim around. It looks _super_ crisp. I think it's because we live in a world of streaming. Streaming compression doesn't lend itself very well to confetti flying around everywhere. If you try and stream something like that it gets super blurry. At least for me, being conditioned to that quality and then looking at this makes it look unbelievably crisp.

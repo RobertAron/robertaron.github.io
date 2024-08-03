@@ -11,50 +11,15 @@ import styles from "./styles.module.css";
 
 type FeatureItem = {
   title: string;
-  description: JSX.Element;
+  description: React.ReactNode;
   icon: React.ForwardRefExoticComponent<
     Omit<LucideProps, "ref"> & React.RefAttributes<SVGSVGElement>
   >;
 };
 
-const featureList: FeatureItem[] = [
-  {
-    title: "3D Art",
-    description: <>Skilled in 3D modeling, texturing, and animation.</>,
-    icon: Rotate3D,
-  },
-  {
-    title: "Website Development",
-    description: (
-      <>
-        Experienced in creating and maintaining websites, both frontend and
-        backend.
-      </>
-    ),
-    icon: PanelsTopLeft,
-  },
-  {
-    title: "Backend Development",
-    description: (
-      <>
-        Proficient in server-side logic, database management, and API
-        integration.
-      </>
-    ),
-    icon: Network,
-  },
-  {
-    title: "Video Game Development",
-    description: (
-      <>Expertise in game design, programming, and project collaboration.</>
-    ),
-    icon: Gamepad2,
-  },
-];
-
 function Feature({ title, description, icon: Icon }: FeatureItem) {
   return (
-    <div className="flex items-start gap-8">
+    <div className="flex items-start gap-8 col-span-2 md:col-span-1">
       <div className="flex rounded-lg border-4 border-solid border-[#08d9db] bg-[#175377] p-2">
         <Icon className="h-10 w-10 text-white" />
       </div>
@@ -73,9 +38,26 @@ export default function HomepageFeatures(): JSX.Element {
     <section className={styles.features}>
       <div className="container">
         <div className="grid grid-cols-2 gap-8">
-          {featureList.map((props) => (
-            <Feature key={props.title} {...props} />
-          ))}
+          <Feature
+            title="Website Development"
+            description="High performance web applications, without losing key web fundamentals."
+            icon={PanelsTopLeft}
+          />
+          <Feature
+            title="Technical Artist"
+            description="Shaders, instancing, LOD generation and other technical 3D skills."
+            icon={Rotate3D}
+          />
+          <Feature
+            title="Backend Development"
+            description="At scale throughput systems. Architecture, Software, and Deployment."
+            icon={Network}
+          />
+          <Feature
+            title="Video Game Development"
+            description="Engineering-focused game development. Graphics programming, optimization, and tool development."
+            icon={Gamepad2}
+          />
         </div>
       </div>
     </section>

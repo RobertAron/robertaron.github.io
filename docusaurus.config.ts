@@ -1,6 +1,7 @@
 import { themes as prismThemes } from "prism-react-renderer";
 import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
+const webpack = require("webpack");
 
 const config: Config = {
   title: "Robert Aron",
@@ -96,8 +97,9 @@ const config: Config = {
       // copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
     },
     prism: {
-      theme: prismThemes.github,
+      theme: prismThemes.oneLight,
       darkTheme: prismThemes.dracula,
+      additionalLanguages: ['csharp'],
     },
   } satisfies Preset.ThemeConfig,
   plugins: [
@@ -111,6 +113,23 @@ const config: Config = {
             require("autoprefixer"),
           ];
           return postcssOptions;
+        },
+      };
+    },
+    function webpackPlugin(context, options) {
+      return {
+        name: "webpack-plugin",
+        configureWebpack(config, isServer, utils, content) {
+          // config.ignoreWarnings.pu
+          return {
+            ignoreWarnings: [
+              {
+                module: /RapierPhysics\.js$/,
+                message:
+                  /Critical dependency: the request of a dependency is an expression/,
+              },
+            ],
+          };
         },
       };
     },
