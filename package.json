@@ -24,6 +24,7 @@
     "@types/three": "^0.167.1",
     "autoprefixer": "^10.4.19",
     "clsx": "^2.0.0",
+    "date-fns": "^3.6.0",
     "framer-motion": "^11.3.19",
     "lucide-react": "^0.414.0",
     "postcss": "^8.4.39",

@@ -62,6 +62,7 @@ const config: Config = {
           position: "left",
           label: "Posts",
         },
+        { href: "/experience", position: "left", label: "Experience" },
         {
           href: "https://github.com/RobertAron/",
           label: "GitHub",
@@ -99,7 +100,7 @@ const config: Config = {
     prism: {
       theme: prismThemes.oneLight,
       darkTheme: prismThemes.dracula,
-      additionalLanguages: ['csharp'],
+      additionalLanguages: ["csharp"],
     },
   } satisfies Preset.ThemeConfig,
   plugins: [

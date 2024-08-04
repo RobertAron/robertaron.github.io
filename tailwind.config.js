@@ -7,7 +7,8 @@ module.exports = {
     container: false,
   },
   darkMode: ["class", '[data-theme="dark"]'],
-  content: ["./src/**/*.{jsx,tsx,html}","./docs/**/*.{jsx,tsx,html}"],
+  content: ["./src/**/*.{jsx,tsx,html,mdx}","./docs/**/*.{jsx,tsx,html,mdx}"],
+  safelist:["mt-auto"],
   theme: {
     extend: {
       fontFamily: {

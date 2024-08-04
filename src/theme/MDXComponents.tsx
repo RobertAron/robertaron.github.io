@@ -1,7 +1,6 @@
 import type React from "react";
 import MDXComponents from "@theme-original/MDXComponents";
 
-
 const parser = new DOMParser();
 const MyMdxComponents: typeof MDXComponents = {
   ...MDXComponents,
@@ -26,12 +25,15 @@ const MyMdxComponents: typeof MDXComponents = {
       match !== null
         ? { url: match[1], text: match[2].trim() }
         : { text: alt, url: null };
-    const textDecoded = parser.parseFromString(text, 'text/html').body.textContent;
+    const textDecoded = parser.parseFromString(text, "text/html").body
+      .textContent;
     return (
       <figure className="mb-4 flex flex-col items-center gap-1 text-sm italic">
         <MDXComponents.img
           {...restProps}
-          alt={url === null ? textDecoded : `${textDecoded}. Viewable at ${url}`}
+          alt={
+            url === null ? textDecoded : `${textDecoded}. Viewable at ${url}`
+          }
           className="w-full"
         />
         <figcaption>

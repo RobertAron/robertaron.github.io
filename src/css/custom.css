@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/**
+/* *
  * Any CSS included here will be global. The classic template
  * bundles Infima by default. Infima is a CSS framework designed to
  * work well for content-centric websites.
@@ -18,10 +18,10 @@
   --ifm-color-primary-lighter: #126e92;
   --ifm-color-primary-lightest: #178bb8;
   --ifm-code-font-size: 95%;
+  --ifm-breadcrumb-size-multiplier: 0.5;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme="dark"] {
   --ifm-color-primary: #08d9db;
   --ifm-color-primary-dark: #07c3c5;
@@ -35,10 +35,13 @@
 }
 
 * {
-  line-height: calc(1em + 0.725rem);
   --ifm-transition-fast: 70ms;
   --ifm-transition-slow: 150ms;
   --ifm-link-hover-decoration: none;
+}
+
+.markdown {
+  line-height: calc(1em + 0.725rem);
 }
 
 .disable-ring:focus {
@@ -54,7 +57,7 @@
 }
 
 [data-theme="light"] a {
-  color: var(--ifm-color-primary-lightest)
+  color: var(--ifm-color-primary-lightest);
 }
 
 [data-theme="light"] .footer__link-item {
@@ -64,7 +67,7 @@
 @media (min-width: 997px) {
   main
     .docItemCol_node_modules-\@docusaurus-theme-classic-lib-theme-DocItem-Layout-styles-module {
-      margin: auto;
-      max-width: 60% !important;
+    margin: auto;
+    max-width: 60% !important;
   }
 }
