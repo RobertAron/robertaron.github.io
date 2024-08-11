@@ -1,0 +1,16 @@
+{
+    "rewrites": [
+        {
+            "source": "/TemplateData/:path*",
+            "destination": "https://www.robertaron.io/BeamBattleOnline/TemplateData/:path*"
+        },
+        {
+            "source": "/Build/:path*",
+            "destination": "https://www.robertaron.io/BeamBattleOnline/Build/:path*"
+        },
+        {
+            "source": "/BeamBattleOnline/:path*",
+            "destination": "https://www.robertaron.io/BeamBattleOnline/:path*"
+        }
+    ]
+}

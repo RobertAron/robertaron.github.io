@@ -1,7 +1,8 @@
 import type React from "react";
 import MDXComponents from "@theme-original/MDXComponents";
+import { decode } from "html-entities";
 
-const parser = new DOMParser();
+
 const MyMdxComponents: typeof MDXComponents = {
   ...MDXComponents,
   p: (props) => <p className="text-[calc(1.25rem)]">{props.children}</p>,
@@ -25,8 +26,7 @@ const MyMdxComponents: typeof MDXComponents = {
       match !== null
         ? { url: match[1], text: match[2].trim() }
         : { text: alt, url: null };
-    const textDecoded = parser.parseFromString(text, "text/html").body
-      .textContent;
+    const textDecoded = decode(text)
     return (
       <figure className="mb-4 flex flex-col items-center gap-1 text-sm italic">
         <MDXComponents.img
