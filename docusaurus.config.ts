@@ -49,6 +49,9 @@ const config: Config = {
   themeConfig: {
     // Replace with your project's social card
     image: "img/fullbody.webp",
+    colorMode: {
+      respectPrefersColorScheme: true,
+    },
     navbar: {
       title: "Robert Aron",
       logo: {
