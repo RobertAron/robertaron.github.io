@@ -1,0 +1,73 @@
+import { ExperienceItem } from "./_ExperienceItem";
+import tgcLogo from "./img/TG-full-logo.webp";
+import saatvaLogo from "./img/saatva_logo.jpg";
+import statefarmLogo from "./img/statefarmlogo.png";
+
+# Experience
+
+<ol className="flex list-none flex-col p-0">
+  <ExperienceItem
+    logoSrc={tgcLogo}
+    logoAlt={"thatgamecompany logo"}
+    title={"Lead Full Stack Engineer"}
+    companyName={"thatgamecompany"}
+    duration={"3 yrs 2 mos"}
+    start={new Date("2021-07-01")}
+    end={new Date()}
+    description={
+      <ul>
+        <li>
+          Game admin tooling to manage player accounts, investigate reports,
+          send in game annoucements.
+        </li>
+        <li>
+          Create tooling to provide analytics player behavior and experience.
+        </li>
+        <li>
+          Anything there isn't a dedicated group to work on (like a companion
+          app!)
+        </li>
+        <li>Onboard, train, and mentor fullstack team</li>
+      </ul>
+    }
+  />
+  <hr />
+  <ExperienceItem
+    logoSrc={saatvaLogo}
+    logoAlt={"Saatva logo"}
+    title={"Software Engineer"}
+    companyName={"Saatva"}
+    duration={"4 mos"}
+    start={new Date("2021-04-01")}
+    end={new Date("2021-07-01")}
+    description={
+      <ul>
+        <li>
+          Work on user facing website. Implement designs by working with UI/UX
+          team. Update and connect with CMS.
+        </li>
+      </ul>
+    }
+  />
+  <hr />
+  <ExperienceItem
+    logoSrc={statefarmLogo}
+    logoAlt={"State Farm logo"}
+    title={"Software Engineer"}
+    companyName={"State Farm"}
+    duration={"3 yrs 4 mos"}
+    start={new Date("2018-01-01")}
+    end={new Date("2021-04-01")}
+    description={
+      <ul>
+        <li>
+          Design and Develop react application to allow users control data
+          applications.
+        </li>
+        <li>Develop and maintain Python & Node APIs</li>
+        <li>Develop and maintain Typescript SDK to interface with rest APIs</li>
+        <li>Write spark applications</li>
+      </ul>
+    }
+  />
+</ol>
