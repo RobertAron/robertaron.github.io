@@ -12,16 +12,18 @@ function HomepageHeader() {
   return (
     <header
       className={clsx(
-        "hero hero--primary flex min-h-[60vh] flex-wrap justify-center gap-24",
+        "hero hero--primary flex min-h-[60vh] flex-col justify-center gap-4 lg:flex-row lg:gap-24",
         styles.heroBanner,
       )}
     >
       <div className="flex max-w-full flex-col items-stretch gap-4">
         <Heading
           as="h1"
-          className="hero__title max-w-[600px] break-words text-5xl md:text-5xl"
+          className="hero__title max-w-[600px] break-words text-7xl tracking-tighter lg:text-left lg:text-8xl"
         >
-          {siteConfig.tagline}
+          {siteConfig.tagline.split(" ").map((ele) => (
+            <div key={ele}>{ele}</div>
+          ))}
         </Heading>
         <Link
           className="group relative grid grid-cols-1"

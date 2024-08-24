@@ -5,7 +5,7 @@ const webpack = require("webpack");
 
 const config: Config = {
   title: "Robert Aron",
-  tagline: "Websites, Websockets, and Witchcraft",
+  tagline: "Websites Websockets Witchcraft",
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
