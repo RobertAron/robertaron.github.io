@@ -1,4 +1,4 @@
-import { BoidsMain } from "./_boids/BoidsMain";
+import { BoidsEntrypoint } from "./_boids/BoidsEntrypoint";
 import { SkipForward } from "lucide-react"; 
 
 # Fish Simulator (boids)
@@ -10,7 +10,7 @@ import { SkipForward } from "lucide-react";
 Boids refers to a way to simulate how animals move to together in groups. Specifically, it's usually used in references to fishes or birds. Basically - it's how birds flock.
 
 {/* prettier-ignore */}
-<>![Photo of birds a large number of birds flocking. Photo by James Wainscoat](./img/birds-flocking.webp "test meta")</>
+<>![Photo of birds a large number of birds flocking. Photo by James Wainscoat](./img/birds-flocking.webp)</>
 
 ## The Rules of Boids
 
@@ -225,6 +225,6 @@ function createNearbyGraph(allFish: Fish[], distance: number) {
 
 For my implementation I'll be using [`react three fiber`](https://github.com/pmndrs/react-three-fiber). It's a way to tie together `react.js` and `three.js`
 
-<BoidsMain />
+<BoidsEntrypoint />
 
 A little bit off topic but I find it super mezmerizing to look at them swim around. It looks _super_ crisp. I think it's because we live in a world of streaming. Streaming compression doesn't lend itself very well to confetti flying around everywhere. If you try and stream something like that it gets super blurry. At least for me, being conditioned to that quality and then looking at this makes it look unbelievably crisp.

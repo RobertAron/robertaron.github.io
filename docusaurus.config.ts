@@ -1,7 +1,6 @@
 import { themes as prismThemes } from "prism-react-renderer";
 import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
-const webpack = require("webpack");
 
 const config: Config = {
   title: "Robert Aron",
@@ -57,6 +56,8 @@ const config: Config = {
       logo: {
         alt: "My Site Logo",
         src: "img/headshot.webp",
+        width: 32,
+        height: 32,
       },
       items: [
         {
