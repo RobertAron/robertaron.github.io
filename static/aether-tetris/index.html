@@ -1,5 +1,15 @@
 <html>
   <head>
+    <script>
+      if (!window.location.pathname.endsWith("/")) {
+        window.location.replace(
+          window.location.pathname +
+            "/" +
+            window.location.search +
+            window.location.hash,
+        );
+      }
+    </script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
@@ -34,6 +44,11 @@
       height="1770"
       style="cursor: auto"
     ></canvas>
-    <script src="./aether-tetris.js"></script>
+    <script>
+      var Module = {
+        locateFile: (path) => path,
+      };
+    </script>
+    <script src="aether-tetris.js"></script>
   </body>
 </html>
